@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I-5 Design Build · Daily digest · Thu Aug 13, 2026</title>
+<style>
+:root{
+  --ink:#1a1612;--muted:#6a635a;--paper:#efe8dc;--card:#faf6ef;--line:#ddd4c6;
+  --char:#10141a;--char2:#1b222b;--orange:#e86c1a;--orange-dk:#c4530e;
+  --red:#b42318;--amber:#9a6700;--green:#2f6a40;--blue:#1f4e79;--gold:#c9a36a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font:15px/1.45 system-ui,"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper)}
+header{background:linear-gradient(165deg,#0d1116 0%,#1a222c 72%,#1e1814 100%);color:#f6f0e6;padding:32px 28px 26px;border-bottom:4px solid var(--orange)}
+.brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.mark{font-weight:800;letter-spacing:.14em;font-size:12px;color:var(--orange);text-transform:uppercase}
+.hdr-meta{color:#b9ae9e;font-size:12px}
+header h1{margin:10px 0 0;font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1.15}
+header .sub{color:#c4b8a8;font-size:13px;margin-top:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:26px 22px 56px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.chip{display:inline-block;padding:5px 11px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.01em;border:1px solid transparent}
+.chip.green{background:#e6f3ea;color:var(--green);border-color:#b4d4bc}
+.chip.amber{background:#f8efd0;color:var(--amber);border-color:#e4d08a}
+.chip.red{background:#fde8e6;color:var(--red);border-color:#f0b8b2}
+.chip.blue{background:#e8f1f8;color:var(--blue);border-color:#b7cfe0}
+.lede{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--orange);padding:16px 20px;margin:22px 0 8px}
+.lede p{margin:0;font-size:15.5px}
+h2{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:30px 0 10px;font-weight:700}
+.mosaic{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:214px 188px 172px;gap:7px}
+.mosaic figure{margin:0;position:relative;overflow:hidden;background:#1c1814;border-radius:3px}
+.mosaic .hero{grid-row:1/3}
+.mosaic img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.06) contrast(1.03)}
+.mosaic figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 11px 8px;background:linear-gradient(transparent,rgba(8,7,6,.82));color:#fff;font-size:11px;font-weight:600;letter-spacing:.02em;line-height:1.35}
+.mosaic figcaption span{display:block;color:#f0b27a;font-weight:500;font-size:10px;letter-spacing:.04em;text-transform:uppercase;margin-top:1px}
+.panel{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{background:var(--card);border:1px solid var(--line);padding:15px 16px 13px;border-radius:4px}
+.box h3{margin:0 0 2px;font-size:15px}
+.jobno{color:var(--muted);font-weight:650;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.bar{margin:0 0 9px}
+.bar .lbl{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted);margin-bottom:3px}
+.bar .lbl b{color:var(--ink);font-weight:650}
+.track{height:9px;background:#ece6dc;border-radius:99px;overflow:hidden}
+.fill{height:100%;border-radius:99px;background:var(--orange)}
+.fill.ok{background:var(--green)}
+.fill.ghost{background:#c9c1b5}
+.fill.low{background:#c9c1b5}
+.note{font-size:12px;color:var(--muted);margin:12px 0 0;padding:8px 10px;background:#efe8dc;border-radius:3px}
+.money{background:var(--char);color:#efe8dc;border-radius:4px;padding:16px 18px 14px;margin-top:12px}
+.money h2{color:#c4b8a8;margin:0 0 8px}
+.money .total{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:0 0 4px}
+.money .total span{color:var(--orange)}
+.money .hint{font-size:12px;color:#a89c8c;margin:0 0 14px}
+.mrow{display:grid;grid-template-columns:148px 1fr 86px;align-items:center;gap:10px;margin:0 0 7px;font-size:12px}
+.mrow .n{color:#d8cfc2}
+.mrow .v{text-align:right;font-variant-numeric:tabular-nums;color:#f6f0e6;font-weight:650}
+.mtrack{height:8px;background:#2a313a;border-radius:99px;overflow:hidden}
+.mfill{height:100%;background:linear-gradient(90deg,var(--orange-dk),var(--orange));border-radius:99px}
+.lock{display:flex;gap:12px;align-items:flex-start;margin-top:14px;padding:10px 12px;background:#1b222b;border:1px solid #2d3640;border-radius:3px;font-size:12px;color:#c4b8a8;line-height:1.4}
+.lock svg{flex:0 0 16px;margin-top:1px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);padding:16px 18px 14px;border-radius:4px}
+.card.wide{grid-column:1/-1}
+.card h3{margin:0 0 2px;font-size:16px;letter-spacing:-.015em}
+.meta{font-size:12px;color:var(--muted);margin:0 0 10px}
+.card ul{margin:0;padding-left:17px}
+.card li{margin:0 0 6px}
+.card li:last-child{margin-bottom:0}
+.mail{margin:10px 0 0;padding:9px 12px 8px;background:#f3ebe0;border-left:3px solid var(--orange);border-radius:0 3px 3px 0}
+.mail .from{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--orange-dk);margin:0 0 4px}
+.mail p{margin:0 0 6px;font-size:13.5px}
+.mail p:last-child{margin:0}
+.quiet{background:var(--card);border:1px dashed var(--line);padding:12px 16px;border-radius:4px;font-size:13.5px;color:#3d3832}
+.quiet div{margin:0 0 4px}
+.quiet div:last-child{margin:0}
+.quiet strong{display:inline-block;min-width:9.2em}
+footer{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media(max-width:820px){
+  header{padding:22px 18px 20px} header h1{font-size:24px}
+  .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:200px 158px 150px 150px}
+  .mosaic .hero{grid-row:auto;grid-column:1/-1;height:220px}
+  .panel,.cards{grid-template-columns:1fr}
+  .card.wide{grid-column:auto}
+  .mrow{grid-template-columns:120px 1fr 78px}
+}
+@media print{
+  header{border-bottom-width:3px}
+  .mosaic{grid-template-rows:160px 140px 130px}
+  .card,.box{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="mark">I-5 Design Build Inc.</span>
+    <span class="hdr-meta">Company 9328 · Procore + field email · Friday AM Zoom</span>
+  </div>
+  <h1>Daily digest · Thursday, August 13, 2026</h1>
+  <div class="sub">PT day 12:00 AM–11:59 PM · plus Friday morning coordination</div>
+  <div class="chips">
+    <span class="chip green">Kentucky Downs lobby cleared to open Friday</span>
+    <span class="chip amber">Muckleshoot turnover pulled to just before Christmas</span>
+    <span class="chip red">Table Mountain sump pedestal</span>
+    <span class="chip amber">Tucson coffee tables overdue</span>
+    <span class="chip blue">Todd wants 2 carpenters at Legends 8/31</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="lede">
+  <p>Kentucky Downs lobby passed final state inspection — green light to open Friday. Bob Strum pulled Muckleshoot turnover to just before Christmas (was first week of January) after lunch with Shaun; the job now absorbs NudlBar plus major steel. Spirit Mountain closed the plumbing/HVAC stack (sump <strong>rejected</strong>, removed in Rev&nbsp;2) and sits at P-1 15% / P-2 0%. Table Mountain needs Tate to price a bridging sump pedestal. Desert Diamond coffee-table R&amp;R is overdue; bids due Monday. 87 photos across five jobs.</p>
+</section>
+
+<h2>From the field · 87 photos yesterday</h2>
+<div class="mosaic">
+  <figure class="hero">
+    <img src="photos/legends-hector-am.jpg" alt="Legends corridor with protection down">
+    <figcaption>Legends · Corridor wrap down<span>Hector Ortiz</span></figcaption>
+  </figure>
+  <figure>
+    <img src="photos/spirit-mt-bar-1.jpg" alt="Spirit Mountain Sports Bar LED bulkhead">
+    <figcaption>Spirit Mt Bar · LED bulkhead live, slab raw<span>Schuyler Dartt</span></figcaption>
+  </figure>
+  <figure>
+    <img src="photos/desert-diamond-1.jpg" alt="Desert Diamond rustic beams over live casino floor">
+    <figcaption>Desert Diamond · Beam grid over live floor<span>Todd Robison</span></figcaption>
+  </figure>
+  <figure>
+    <img src="photos/muckleshoot.jpg" alt="Muckleshoot drywall at 146B">
+    <figcaption>Muckleshoot · Drywall at 146B<span>Marc Talen</span></figcaption>
+  </figure>
+  <figure>
+    <img src="photos/kentucky-downs.jpg" alt="Kentucky Downs tile and wrapped equipment">
+    <figcaption>Kentucky Downs · Tile + wrapped equipment<span>Andres Villa</span></figcaption>
+  </figure>
+  <figure>
+    <img src="photos/legends-earl.jpg" alt="Legends pre-function I-5 lift on new carpet">
+    <figcaption>Legends · Pre-function · I-5 lift on new carpet<span>Earl Pluard</span></figcaption>
+  </figure>
+  <figure>
+    <img src="photos/spirit-mt-bar-2.jpg" alt="Spirit Mountain crew at field kiosk">
+    <figcaption>Spirit Mt Bar · Crew on 5242-1 kiosk<span>Schuyler Dartt</span></figcaption>
+  </figure>
+  <figure>
+    <img src="photos/desert-diamond-3.jpg" alt="Desert Diamond beam grid over live floor">
+    <figcaption>Desert Diamond · More of the beam grid<span>Todd Robison</span></figcaption>
+  </figure>
+</div>
+
+<h2>Onsite / schedule</h2>
+<div class="panel">
+  <article class="box">
+    <div class="jobno">5242-1</div>
+    <h3>Spirit Mountain Sports Bar</h3>
+    <div class="bar"><div class="lbl"><span>P-1 overall</span><b>15%</b></div><div class="track"><div class="fill" style="width:15%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>P-1 construction wall</span><b>100%</b></div><div class="track"><div class="fill ok" style="width:100%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>P-1 interior wall</span><b>21%</b></div><div class="track"><div class="fill" style="width:21%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>P-1 ceilings</span><b>20%</b></div><div class="track"><div class="fill" style="width:20%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>P-1 floor SOG</span><b>5%</b></div><div class="track"><div class="fill" style="width:5%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>P-2 overall</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>P-2 interior wall</span><b>3%</b></div><div class="track"><div class="fill" style="width:3%"></div></div></div>
+  </article>
+  <article class="box">
+    <div class="jobno">5302-1</div>
+    <h3>Table Mountain</h3>
+    <div class="bar"><div class="lbl"><span>Project Schedule overall</span><b>50%</b></div><div class="track"><div class="fill" style="width:50%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Design and Planning</span><b>75%</b></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Phase 1 · Bev 2</span><b>99%</b></div><div class="track"><div class="fill ok" style="width:99%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Phase 2 · Bev 5 &amp; Sports Bar</span><b>50%</b></div><div class="track"><div class="fill" style="width:50%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Phase 2 demolition</span><b>65%</b></div><div class="track"><div class="fill" style="width:65%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Phase 2 construction</span><b>3%</b></div><div class="track"><div class="fill" style="width:3%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Punch / closeout / demobilization</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0%"></div></div></div>
+  </article>
+  <article class="box">
+    <div class="jobno">5152-1</div>
+    <h3>Legends Casino</h3>
+    <div class="bar"><div class="lbl"><span>Lobby cultural enhancements</span><b>100%</b></div><div class="track"><div class="fill ok" style="width:100%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Conference &amp; Banquet</span><b>75%</b></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Conference &amp; Banquet · onsite</span><b>51%</b></div><div class="track"><div class="fill" style="width:51%"></div></div></div>
+    <p class="note" style="margin-top:8px">No single overall % — two live construction roots only. Contract Date root is 0%.</p>
+  </article>
+  <article class="box">
+    <div class="jobno">5308-2</div>
+    <h3>Desert Diamond Tucson</h3>
+    <div class="bar"><div class="lbl"><span>Project Schedule overall</span><b>90%</b></div><div class="track"><div class="fill ok" style="width:90%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Architectural drawings</span><b>90%</b></div><div class="track"><div class="fill ok" style="width:90%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Offsite fabrication &amp; precon</span><b>4%</b></div><div class="track"><div class="fill" style="width:4%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Onsite implementation</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0%"></div></div></div>
+  </article>
+  <article class="box">
+    <div class="jobno">5326</div>
+    <h3>Kentucky Downs</h3>
+    <p class="note" style="margin:0 0 10px">No single overall %. Eleven procurement / CD / bid roots are 100%.</p>
+    <div class="bar"><div class="lbl"><span>Subcontracting / I-5 onsite</span><b>46%</b></div><div class="track"><div class="fill" style="width:46%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Décor design and fabrication</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0%"></div></div></div>
+  </article>
+  <article class="box">
+    <div class="jobno">5312</div>
+    <h3>Muckleshoot</h3>
+    <p class="note" style="margin:0 0 10px">No single overall %. All three live roots still 0% in Procore — field is ahead of the published schedule.</p>
+    <div class="bar"><div class="lbl"><span>Structural steel reinforcing</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Nudl Bar venue</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0%"></div></div></div>
+    <div class="bar"><div class="lbl"><span>Sportsbook and Food Hall</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0%"></div></div></div>
+  </article>
+</div>
+<p class="note">Gila River overall 90% (root “Week”) — quiet yesterday. Wyoming Downs: 88 tasks, all published roots 0%; no overall. Spirit Mt Restaurant: 0 schedule tasks (completed).</p>
+
+<div class="money">
+  <h2>Portfolio · estimated value</h2>
+  <p class="total"><span>$132,265,012.64</span> across nine jobs</p>
+  <p class="hint">Procore <em>estimated_value</em> / <em>total_value</em> from the company project list. Not live budget-vs-actual.</p>
+  <div class="mrow"><span class="n">Desert Diamond Tucson</span><div class="mtrack"><div class="mfill" style="width:100%"></div></div><span class="v">$33.88M</span></div>
+  <div class="mrow"><span class="n">Wyoming Downs</span><div class="mtrack"><div class="mfill" style="width:84.2%"></div></div><span class="v">$28.53M</span></div>
+  <div class="mrow"><span class="n">Gila River</span><div class="mtrack"><div class="mfill" style="width:63.5%"></div></div><span class="v">$21.51M</span></div>
+  <div class="mrow"><span class="n">Muckleshoot</span><div class="mtrack"><div class="mfill" style="width:51.7%"></div></div><span class="v">$17.53M</span></div>
+  <div class="mrow"><span class="n">Spirit Mt sports bar</span><div class="mtrack"><div class="mfill" style="width:41.0%"></div></div><span class="v">$13.88M</span></div>
+  <div class="mrow"><span class="n">Legends</span><div class="mtrack"><div class="mfill" style="width:27.1%"></div></div><span class="v">$9.18M</span></div>
+  <div class="mrow"><span class="n">Kentucky Downs</span><div class="mtrack"><div class="mfill" style="width:13.5%"></div></div><span class="v">$4.57M</span></div>
+  <div class="mrow"><span class="n">Table Mountain</span><div class="mtrack"><div class="mfill" style="width:9.1%"></div></div><span class="v">$3.09M</span></div>
+  <div class="mrow"><span class="n">Spirit Mt restaurant</span><div class="mtrack"><div class="mfill" style="width:0.3%"></div></div><span class="v">$94.5K</span></div>
+  <div class="lock">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" stroke="#e86c1a" stroke-width="1.8"/><path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="#e86c1a" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <div><strong style="color:#f6f0e6">Financials locked on this app.</strong> Committed, invoiced, and remaining are 403 (budget line items, views, prime contracts, POs / work orders). Cost codes are readable but carry no dollars. No remaining bars invented.</div>
+  </div>
+</div>
+
+<h2>Jobs · busiest first</h2>
+<div class="cards">
+
+<article class="card wide">
+  <h3>Spirit Mountain Sports Bar, Entry Gaming, Restrooms</h3>
+  <div class="meta">5242-1 · $13.88M · PX Joe Jordan · PM Daniel Scamman · 12 submittals · 5 photos · 95 schedule tasks · last write 5:17 PM PT · completion 12/29/26</div>
+  <ul>
+    <li><strong>Sump pump 22 10 00-6 rejected</strong> and closed 3:57 PM — “removed from project in Revision #2” (Joe Martucci; Contact RN had already rejected 8/6).</li>
+    <li>Joe closed the rest of Jeromy’s plumbing package (floor sink/urinal/lav/WC as-noted; drain/cleanout/circ pump approved) plus two HVAC items from Paul Hettervig.</li>
+    <li>New: <em>VAV Box</em> sent to client — ball-in-court <strong>Ron Reibach</strong>, due Fri 8/14.</li>
+    <li>Zoom: quartz top drawing to Dan; Howie Rasmussen Matterport is up. Schuyler asked how much bar grid to pull — Dan pointed to Joe Martucci / Mike Williams. <strong>No decision.</strong></li>
+  </ul>
+  <div class="mail">
+    <div class="from">email from Joe Jordan · fwd Schuyler Dartt daily, Wed 8/12</div>
+    <p>I-5 BOH dust barriers, chandelier demo, TS layout. J&amp;G demo P-1 / grout demo P-2. Mesa framed private dining and ramp walls. Affordable Drains found heavy sludge in restroom waste and recommended water jetting.</p>
+    <p>Manpower: I-5 8 · J&amp;G 5 · Mesa 5 · S&amp;S 4 · Thrasher 2 · Drains 1.</p>
+  </div>
+</article>
+
+<article class="card wide">
+  <h3>Muckleshoot Sportsbook &amp; Food Court</h3>
+  <div class="meta">5312 · $17.53M · PX George Hier · PM Bob Strum · CM Marc Talen · 4 photos (Marc Talen, ~4:00 PM) · Procore completion 1/7/27</div>
+  <div class="mail">
+    <div class="from">email from Bob Strum · 6:02 PM</div>
+    <p>Lunch with Shaun (Dir of Ops) on the revised schedule with Marc Talen. Job now absorbs NudlBar plus major steel reinforcing. <strong>Turnover pulled to just before Christmas</strong> (was first week of January).</p>
+    <p>Electrician needs more manpower and documented credits for reduced scope. Agility must confirm install dates after steel “understated weight” hit. Top risk: owner decision / contracting latency — NudlBar kitchen equipment, chicken-venue kitchen design weeks out, beer wall stuck in liquor license. Owner will ask for VE on High Limits and possibly Valet entrance.</p>
+  </div>
+  <div class="mail">
+    <div class="from">email from George Hier · 6:07 PM</div>
+    <p>Bingo facility master planning starting soon. Good direction on the high-limit area.</p>
+  </div>
+  <div class="mail">
+    <div class="from">email from Marc Talen · 3:48 PM weekly</div>
+    <p>McClean Iron Works started column reinforcing (stitch welding, first large T-brace). Betschart pulled primary feeders to three new panels and conduit behind the Sportsbook video wall. Wallpaper Eagle finished Sportsbook wallcoverings. General Mechanical GPR-scanned the NudlBar floor, trench drain at the main bar, plumbing/gas rough-in. Auburn Mechanical verified underground waste depth. Capital Heating removed conflicting duct. Mesa completed NudlBar framing.</p>
+    <p>Next week: steel / T-braces, electrical, NudlBar plumbing/gas/trench drain, flooring/décor. Highlight: approved structural steel submittals.</p>
+  </div>
+  <ul>
+    <li>Friday Zoom walked Bob’s Mon 12/21 Building-to-Owner / Tue 12/22 Sports Bar open — Todd doesn’t think décor installers can hit it. <strong>Blocker still in play: installer availability.</strong></li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Kentucky Downs Lucky Lantern</h3>
+  <div class="meta">5326 · $4.57M · PX Joe Jordan · PM Bob Strum · CM Andres Villa · 14 photos (Andres, 10:23 AM–12:26 PM)</div>
+  <div class="mail">
+    <div class="from">email from Andres Villa · 1:11 PM EOD</div>
+    <p>Gas lines in and on pressure test. Ceiling tile 95%. Lucky Lantern sprinkler 95%. Eliason door frame set to BOH.</p>
+    <p><strong>Final state inspections passed for all Lobby areas — green light to open Friday.</strong> CO to be uploaded after special-inspection docs. Tomorrow: remove candlestick barrier/fence at casino front; continue drywall/finish.</p>
+  </div>
+</article>
+
+<article class="card">
+  <h3>Legends Casino</h3>
+  <div class="meta">5152-1 · $9.18M · PX Joe Hier · PM Todd Robison · CM Tom Halls · 49 photos (Hector Ortiz 47, Earl Pluard 2) · 5:22 AM–2:35 PM</div>
+  <div class="mail">
+    <div class="from">email from Tom Halls · 1:04 PM weekly</div>
+    <p>Door frames 95% painted. Main pre-function ceiling 100% by EOD; soffit 90%; Event Center entry ceiling patch/skim 60%. New receptacles throughout; all new exit signs up.</p>
+    <p>Look-ahead: chandelier crew Friday (four at Event Center entry). Alana meeting Todd and Joe Friday on office signage, possibly casino-wide.</p>
+  </div>
+  <ul>
+    <li>Zoom: Todd needs <strong>two carpenters on 8/31</strong>, not one. Hector’s Matterport is up.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Table Mountain Sports Bar &amp; Bev</h3>
+  <div class="meta">5302-1 · $3.09M · PX Aaron Carpenter · PM Daniel Scamman · CM Richard Vanderkarr · 1 submittal · 201 tasks (one 10:32 AM republish) · completion 12/2/26</div>
+  <ul>
+    <li>HVAC grilles still <strong>Pending In Review</strong> — G2 + O’Connor as-noted; ball-in-court <strong>Lauryn Caputo</strong> (due yesterday).</li>
+    <li>Zoom: access-floor repairs. Rich VanderKarr flagged a <strong>bridging pedestal at the sump</strong>; Brandon Brown / Dan Scamman getting Tate to price early next week.</li>
+  </ul>
+</article>
+
+<article class="card">
+  <h3>Desert Diamond Tucson</h3>
+  <div class="meta">5308-2 · $33.88M · PX Aaron Carpenter · PM Todd Robison · CM Gus Lammé · 3 submittals · 15 photos (Todd Robison, 8:26 AM batch)</div>
+  <div class="mail">
+    <div class="from">email from Gus Lammé · 5:45 PM weekly</div>
+    <p>Bid-walk week. Bids due Mon 8/17; review with Todd; select subs.</p>
+  </div>
+  <ul>
+    <li><strong>F-07/F-08 custom coffee tables — Revise &amp; Resubmit, overdue</strong> (due 8/12). Ball-in-court Leanne Livingston; Joel Frost still pending.</li>
+    <li>AFRA furniture shop drawings as-noted (open, Deborah Snyder). OpiAry bench created, not yet sent (Tommy Roberts / Joel Frost), due 9/7.</li>
+    <li>Zoom: Leanne asked if order review should postpone; Todd coming up. Finish calls: <strong>ACT-01 edge</strong>, <strong>WC-09 paint SW 6187 Rosemary</strong>.</li>
+  </ul>
+</article>
+
+</div>
+
+<h2>Quiet / also from Friday Zoom</h2>
+<div class="quiet">
+  <div><strong>Gila River 5291</strong> $21.51M · schedule 90% · nothing major.</div>
+  <div><strong>Wyoming Downs 5264-1</strong> $28.53M · no overall % (roots unpublished at 0). Stone samples in bad shape; replacements est. early September. Joel Frost / Mike Williams on in-slab layout Zoom.</div>
+  <div><strong>Spirit Mt Restaurant 5242</strong> $94.5K · completed. Derek Stiles reworked the restaurant-row sketch this morning; final plan includes a new <em>Embers</em> steakhouse — flagged to Joe Jordan.</div>
+</div>
+
+<footer>
+  Coverage gap: RFIs, punch, change events, commitments, daily logs, observations, inspections, incidents, bidding, invoices, and the Resource Planning roster stay 403 on this DMSA. Schedule % from live Procore tasks (collected 11:25 AM PT today). Dollars are estimated_value only. Generated for Thu 2026-08-13 PT plus Friday morning Zoom and Thursday field email.
+</footer>
+</div>
+</body>
+</html>
