@@ -5,71 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>I-5 Design Build · Daily digest by project · Thu Aug 13, 2026</title>
 <style>
-:root{--bg:#10141a;--bg2:#1b222b;--card:#181e26;--line:#2d3640;--ink:#efe8dc;--muted:#a89c8c;--orange:#e86c1a;--odk:#c4530e;--green:#3d9a5a;--red:#e0554a;--amber:#d4a017;--blue:#5aa0d6}
+:root{--bg:#10141a;--bg2:#1b222b;--card:#181e26;--line:#3d4754;--ink:#efe8dc;--muted:#a89c8c;--orange:#e86c1a}
 *{box-sizing:border-box}html,body{margin:0;padding:0}
-body{font:15px/1.45 system-ui,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-header{background:linear-gradient(165deg,#0b0e12 0%,#151b22 70%,#1a1612 100%);padding:28px 22px 22px;border-bottom:4px solid var(--orange)}
+body{font:15px/1.4 system-ui,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:linear-gradient(165deg,#0b0e12,#151b22 70%,#1a1612);padding:24px 20px 18px;border-bottom:4px solid var(--orange)}
 .brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .mark{font-weight:800;letter-spacing:.14em;font-size:11px;color:var(--orange);text-transform:uppercase}
 .hdr-meta{color:#8e8478;font-size:12px}
-header h1{margin:8px 0 0;font-size:26px;font-weight:700;letter-spacing:-.03em}
-header .sub{color:#b9ae9e;font-size:13px;margin-top:5px}
-.wrap{max-width:1080px;margin:0 auto;padding:22px 16px 48px}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0}
-.chip{padding:4px 10px;border-radius:999px;font-size:11px;font-weight:700;border:1px solid transparent}
+header h1{margin:8px 0 0;font-size:24px;font-weight:700;letter-spacing:-.03em}
+.sub{color:#b9ae9e;font-size:13px;margin-top:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:20px 16px 44px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 0}
+.chip{padding:3px 9px;border-radius:999px;font-size:11px;font-weight:700;border:1px solid transparent;display:inline-block}
 .chip.g{background:#16301e;color:#8fd4a2;border-color:#2a5a38}
 .chip.a{background:#32280e;color:#e6c56a;border-color:#6a5418}
 .chip.r{background:#3a1614;color:#f0a39c;border-color:#6a2c28}
 .chip.b{background:#142636;color:#8fc4e8;border-color:#2a4e68}
-.lede{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--orange);padding:14px 16px;margin:18px 0 16px}
+.lede{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--orange);padding:12px 14px;margin:16px 0}
 .lede p{margin:0}
-.port{background:var(--bg2);border:1px solid var(--line);border-radius:5px;padding:14px 16px 12px;margin:0 0 22px}
-.port h2{margin:0 0 4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8e8478}
-.port .tot{font-size:20px;font-weight:700;margin:0 0 2px}
-.port .tot span{color:var(--orange)}
-.port .hint{font-size:12px;color:#8e8478;margin:0 0 10px}
-.prow{display:grid;grid-template-columns:132px 1fr 92px;align-items:center;gap:8px;margin:0 0 6px;font-size:12px}
-.prow .n{color:#d8cfc2}.prow .v{text-align:right;font-variant-numeric:tabular-nums;font-weight:650}
-.ptrack{height:7px;background:#2a313a;border-radius:99px;overflow:hidden}
-.pfill{height:100%;background:linear-gradient(90deg,var(--odk),var(--orange));border-radius:99px}
-h2.sec{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8e8478;margin:26px 0 10px}
-.job{background:var(--card);border:1px solid var(--line);border-radius:6px;margin:0 0 18px;overflow:hidden}
-.job-hd{padding:14px 16px 10px}
+.port{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:0 0 22px}
+.port h2{margin:0 0 8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8e8478}
+.port-row,.money{display:flex;align-items:center;gap:12px}
+.pie{width:52px;height:52px;border-radius:50%;flex:0 0 52px;background:conic-gradient(var(--orange) calc(var(--p)*1%),#2a313a 0)}
+.pie-lbl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8e8478;font-weight:700}
+.nums{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;margin:2px 0}
+.orig,.hint{font-size:12px;color:#8e8478;margin:0}
+h2.sec{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8e8478;margin:28px 0 12px}
+.job{background:var(--card);border:2px solid #3d4754;border-radius:8px;margin:0 0 36px;overflow:hidden}
+.job-hd{padding:14px 16px 8px}
 .jobno{color:var(--orange);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.job-hd h3{margin:2px 0 4px;font-size:19px;letter-spacing:-.02em}
+.job-hd h3{margin:2px 0 4px;font-size:18px;letter-spacing:-.02em}
 .meta{font-size:12px;color:var(--muted);margin:0}
+.sked{margin:8px 0 0;font-size:13px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .shots{display:grid;gap:3px;background:#0a0d11}
 .shots.n4{grid-template-columns:repeat(4,1fr)}
 .shots.n3{grid-template-columns:repeat(3,1fr)}
 .shots img{width:100%;height:148px;object-fit:cover;display:block}
-.cap{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:5px 16px 0;font-size:11px;color:#8e8478}
-.money{background:#0e1218;margin:12px 16px 0;border-radius:4px;padding:12px 12px 10px;border:1px solid #2d3640}
-.money .lbl{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8e8478;font-weight:700;margin:0 0 8px}
-.bar{margin:0 0 7px}
-.bar .row{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted);margin-bottom:3px}
-.bar .row b{color:var(--ink);font-weight:650;font-variant-numeric:tabular-nums}
-.track{height:8px;background:#2a313a;border-radius:99px;overflow:hidden}
-.fill{height:100%;border-radius:99px;background:var(--orange)}
-.fill.ok{background:var(--green)}
-.fill.ghost{background:#3a424c}
-.fill.act{background:#5aa0d6}
-.fill.rev{background:#c9a36a}
-.dash{color:#6a635a}
-.body{padding:12px 16px 16px}
-.note{font-size:12px;color:var(--muted);margin:0 0 8px;padding:7px 9px;background:#141a22;border-radius:3px}
-ul{margin:8px 0 0;padding-left:17px}li{margin:0 0 6px}li:last-child{margin:0}
-.mail{margin:10px 0 0;padding:8px 11px 7px;background:#1e1814;border-left:3px solid var(--orange);border-radius:0 3px 3px 0}
-.mail .from{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--orange);margin:0 0 4px}
-.mail p{margin:0 0 5px;font-size:13.5px}.mail p:last-child{margin:0}
+.cap{padding:5px 16px 0;font-size:11px;color:#8e8478}
+.money{background:#0e1218;margin:12px 16px 0;border-radius:4px;padding:10px 12px;border:1px solid #2d3640}
+.body{padding:10px 16px 16px}
+ul{margin:8px 0 0;padding-left:17px}li{margin:0 0 5px}li:last-child{margin:0}
+.mail{margin:8px 0 0;padding:6px 10px;background:#1e1814;border-left:3px solid var(--orange);border-radius:0 3px 3px 0;font-size:13px}
+.mail b{color:var(--orange);font-size:10px;letter-spacing:.04em;text-transform:uppercase;margin-right:6px}
 .empty{margin:12px 16px;padding:10px 12px;background:#141a22;border:1px dashed var(--line);border-radius:4px;font-size:13px;color:#c4b8a8}
-footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:#8e8478}
+footer{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:#8e8478}
 @media(max-width:720px){
-  header{padding:20px 14px 16px}header h1{font-size:22px}
+  header{padding:18px 14px 14px}header h1{font-size:21px}
   .shots.n4,.shots.n3{grid-template-columns:1fr 1fr}
   .shots img{height:118px}
-  .prow{grid-template-columns:110px 1fr 78px}
+  .pie{width:44px;height:44px;flex-basis:44px}
+  .nums{font-size:13px}
 }
-@media print{.job{break-inside:avoid}body{background:#fff;color:#111}header{color:#efe8dc}}
+@media print{.job{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -91,18 +78,19 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
 <div class="wrap">
 
 <section class="lede">
-  <p>Kentucky Downs lobby passed final state inspection — green light to open Friday. Bob Strum pulled Muckleshoot turnover to just before Christmas (was first week of January) after lunch with Shaun; the job now absorbs NudlBar plus major steel. Spirit Mountain closed the plumbing/HVAC stack (sump <strong>rejected</strong>, removed in Rev&nbsp;2) and sits at P-1 15% / P-2 0%. Table Mountain needs Tate to price a bridging sump pedestal. Desert Diamond coffee-table R&amp;R is overdue; bids due Monday.</p>
+  <p>Kentucky Downs lobby passed final state inspection — green light to open Friday. Bob Strum pulled Muckleshoot turnover to just before Christmas (was first week of January) after lunch with Shaun; the job now absorbs NudlBar plus major steel.</p>
 </section>
 
 <div class="port">
   <h2>Portfolio · Budget tool</h2>
-  <p class="tot"><span>$42,326,811</span> revised across 8 jobs with rows</p>
-  <p class="hint">Construction Manager View detail_rows · collected 12:16 PM PT Aug 14. Remaining is null in the tool — shown as an em dash, not computed. Spirit Mt restaurant is empty (200, 0 rows), not $0. No estimated_value / prime.</p>
-  <div class="prow"><span class="n">Original</span><div class="ptrack"><div class="pfill" style="width:96.2%"></div></div><span class="v">$40,738,752</span></div>
-  <div class="prow"><span class="n">Revised</span><div class="ptrack"><div class="pfill" style="width:100%"></div></div><span class="v">$42,326,811</span></div>
-  <div class="prow"><span class="n">Committed</span><div class="ptrack"><div class="pfill" style="width:28.1%"></div></div><span class="v">$11,889,710</span></div>
-  <div class="prow"><span class="n">Actuals</span><div class="ptrack"><div class="pfill" style="width:0.4%"></div></div><span class="v">$174,342</span></div>
-  <div class="prow"><span class="n">Remaining</span><div class="ptrack"><div class="pfill" style="width:0"></div></div><span class="v dash">—</span></div>
+  <div class="port-row">
+    <div class="pie" style="--p:28.1" title="committed of revised"></div>
+    <div>
+      <div class="pie-lbl">committed of revised</div>
+      <div class="nums">Rev $42,326,811 · Com $11,889,710 · Act $174,342</div>
+      <p class="hint">8 jobs with rows · Orig $40,738,752 · collected 12:16 PM PT Aug 14. Remaining is null in the tool — not shown, not computed. Spirit Mt restaurant empty (200, 0 rows), not $0. No estimated_value / prime.</p>
+    </div>
+  </div>
 </div>
 
 <h2 class="sec">Projects · busiest first</h2>
@@ -111,7 +99,8 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
   <div class="job-hd">
     <div class="jobno">5242-1</div>
     <h3>Spirit Mountain Sports Bar, Entry Gaming, Restrooms</h3>
-    <p class="meta">PX Joe Jordan · PM Daniel Scamman · 12 submittals · 95 schedule tasks · last write 5:17 PM PT · completion 12/29/26</p>
+    <p class="meta">PX Joe Jordan · PM Daniel Scamman · 12 submittals · 95 schedule tasks · last write 5:17 PM PT · P-1 15%</p>
+    <p class="sked">Finish 12/29/26 · <span class="chip a">P-2 not started</span></p>
   </div>
   <div class="shots n4">
     <img src="photos/by-project/spirit-mt-bar/1.jpg" alt="Spirit Mountain Sports Bar wide shot 1">
@@ -119,34 +108,21 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
     <img src="photos/by-project/spirit-mt-bar/3.jpg" alt="Spirit Mountain Sports Bar wide shot 3">
     <img src="photos/by-project/spirit-mt-bar/4.jpg" alt="Spirit Mountain Sports Bar wide shot 4">
   </div>
-  <div class="cap"><span>Schuyler Dartt · 4 wide shots</span></div>
+  <div class="cap">Schuyler Dartt · 4 wide shots</div>
   <div class="money">
-    <div class="lbl">Budget tool · Construction Manager View</div>
-    <div class="bar"><div class="row"><span>Original</span><b>$4,831,388</b></div><div class="track"><div class="fill" style="width:88.5%"></div></div></div>
-    <div class="bar"><div class="row"><span>Revised</span><b>$5,456,349</b></div><div class="track"><div class="fill rev" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Committed</span><b>$2,977,940</b></div><div class="track"><div class="fill" style="width:54.6%"></div></div></div>
-    <div class="bar"><div class="row"><span>Actuals</span><b>$0</b></div><div class="track"><div class="fill act ghost" style="width:0"></div></div></div>
-    <div class="bar"><div class="row"><span>Remaining</span><b class="dash">—</b></div></div>
+    <div class="pie" style="--p:54.6" title="committed of revised"></div>
+    <div>
+      <div class="pie-lbl">committed of revised</div>
+      <div class="nums">Rev $5,456,349 · Com $2,977,940 · Act $0</div>
+      <p class="orig">Orig $4,831,388</p>
+    </div>
   </div>
   <div class="body">
-    <div class="bar"><div class="row"><span>P-1 overall</span><b>15%</b></div><div class="track"><div class="fill" style="width:15%"></div></div></div>
-    <div class="bar"><div class="row"><span>P-1 construction wall</span><b>100%</b></div><div class="track"><div class="fill ok" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>P-1 interior wall</span><b>21%</b></div><div class="track"><div class="fill" style="width:21%"></div></div></div>
-    <div class="bar"><div class="row"><span>P-1 ceilings</span><b>20%</b></div><div class="track"><div class="fill" style="width:20%"></div></div></div>
-    <div class="bar"><div class="row"><span>P-1 floor SOG</span><b>5%</b></div><div class="track"><div class="fill" style="width:5%"></div></div></div>
-    <div class="bar"><div class="row"><span>P-2 overall</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0"></div></div></div>
-    <div class="bar"><div class="row"><span>P-2 interior wall</span><b>3%</b></div><div class="track"><div class="fill" style="width:3%"></div></div></div>
     <ul>
-      <li><strong>Sump pump 22 10 00-6 rejected</strong> and closed 3:57 PM — “removed from project in Revision #2” (Joe Martucci; Contact RN had already rejected 8/6).</li>
-      <li>Joe closed the rest of Jeromy’s plumbing package (floor sink/urinal/lav/WC as-noted; drain/cleanout/circ pump approved) plus two HVAC items from Paul Hettervig.</li>
-      <li>New: <em>VAV Box</em> sent to client — ball-in-court <strong>Ron Reibach</strong>, due Fri 8/14.</li>
+      <li><strong>Sump 22 10 00-6 rejected</strong> and closed 3:57 PM — “removed from project in Revision #2” (Joe Martucci; Contact RN rejected 8/6). Joe closed Jeromy’s plumbing (floor sink/urinal/lav/WC as-noted; drain/cleanout/circ pump approved) plus two HVAC from Paul Hettervig. New <em>VAV Box</em> to client — BIC <strong>Ron Reibach</strong>, due Fri 8/14.</li>
       <li>Zoom: quartz top drawing to Dan; Howie Rasmussen Matterport is up. Schuyler asked how much bar grid to pull — Dan pointed to Joe Martucci / Mike Williams. <strong>No decision.</strong></li>
     </ul>
-    <div class="mail">
-      <div class="from">email from Joe Jordan · fwd Schuyler Dartt daily, Wed 8/12</div>
-      <p>I-5 BOH dust barriers, chandelier demo, TS layout. J&amp;G demo P-1 / grout demo P-2. Mesa framed private dining and ramp walls. Affordable Drains found heavy sludge in restroom waste and recommended water jetting.</p>
-      <p>Manpower: I-5 8 · J&amp;G 5 · Mesa 5 · S&amp;S 4 · Thrasher 2 · Drains 1.</p>
-    </div>
+    <div class="mail"><b>Joe Jordan · fwd Schuyler daily, Wed 8/12</b> I-5 BOH dust barriers, chandelier demo, TS layout. J&amp;G demo P-1 / grout demo P-2. Mesa framed private dining and ramp walls. Affordable Drains found heavy sludge in restroom waste and recommended water jetting. Manpower: I-5 8 · J&amp;G 5 · Mesa 5 · S&amp;S 4 · Thrasher 2 · Drains 1.</div>
   </div>
 </article>
 
@@ -154,7 +130,8 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
   <div class="job-hd">
     <div class="jobno">5312</div>
     <h3>Muckleshoot Sportsbook &amp; Food Court</h3>
-    <p class="meta">PX George Hier · PM Bob Strum · CM Marc Talen · Procore completion 1/7/27</p>
+    <p class="meta">PX George Hier · PM Bob Strum · CM Marc Talen · no overall % · 3 live roots 0% (field ahead of published schedule)</p>
+    <p class="sked">Field target just before Christmas (Procore 1/7/27) · <span class="chip r">installer risk</span></p>
   </div>
   <div class="shots n4">
     <img src="photos/by-project/muckleshoot/1.jpg" alt="Muckleshoot wide shot 1">
@@ -162,37 +139,23 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
     <img src="photos/by-project/muckleshoot/3.jpg" alt="Muckleshoot wide shot 3">
     <img src="photos/by-project/muckleshoot/4.jpg" alt="Muckleshoot wide shot 4">
   </div>
-  <div class="cap"><span>Marc Talen · 4 wide shots</span></div>
+  <div class="cap">Marc Talen · 4 wide shots</div>
   <div class="money">
-    <div class="lbl">Budget tool · Construction Manager View</div>
-    <div class="bar"><div class="row"><span>Original</span><b>$5,579,684</b></div><div class="track"><div class="fill" style="width:95.6%"></div></div></div>
-    <div class="bar"><div class="row"><span>Revised</span><b>$5,836,693</b></div><div class="track"><div class="fill rev" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Committed</span><b>$3,550,577</b></div><div class="track"><div class="fill" style="width:60.8%"></div></div></div>
-    <div class="bar"><div class="row"><span>Actuals</span><b>$57,430</b></div><div class="track"><div class="fill act" style="width:1.0%"></div></div></div>
-    <div class="bar"><div class="row"><span>Remaining</span><b class="dash">—</b></div></div>
+    <div class="pie" style="--p:60.8" title="committed of revised"></div>
+    <div>
+      <div class="pie-lbl">committed of revised</div>
+      <div class="nums">Rev $5,836,693 · Com $3,550,577 · Act $57,430</div>
+      <p class="orig">Orig $5,579,684</p>
+    </div>
   </div>
   <div class="body">
-    <p class="note">No single overall %. All three live roots still 0% in Procore — field is ahead of the published schedule.</p>
-    <div class="bar"><div class="row"><span>Structural steel reinforcing</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0"></div></div></div>
-    <div class="bar"><div class="row"><span>Nudl Bar venue</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0"></div></div></div>
-    <div class="bar"><div class="row"><span>Sportsbook and Food Hall</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0"></div></div></div>
-    <div class="mail">
-      <div class="from">email from Bob Strum · 6:02 PM</div>
-      <p>Lunch with Shaun (Dir of Ops) on the revised schedule with Marc Talen. Job now absorbs NudlBar plus major steel reinforcing. <strong>Turnover pulled to just before Christmas</strong> (was first week of January).</p>
-      <p>Electrician needs more manpower and documented credits for reduced scope. Agility must confirm install dates after steel “understated weight” hit. Top risk: owner decision / contracting latency — NudlBar kitchen equipment, chicken-venue kitchen design weeks out, beer wall stuck in liquor license. Owner will ask for VE on High Limits and possibly Valet entrance.</p>
-    </div>
-    <div class="mail">
-      <div class="from">email from George Hier · 6:07 PM</div>
-      <p>Bingo facility master planning starting soon. Good direction on the high-limit area.</p>
-    </div>
-    <div class="mail">
-      <div class="from">email from Marc Talen · 3:48 PM weekly</div>
-      <p>McClean Iron Works started column reinforcing (stitch welding, first large T-brace). Betschart pulled primary feeders to three new panels and conduit behind the Sportsbook video wall. Wallpaper Eagle finished Sportsbook wallcoverings. General Mechanical GPR-scanned the NudlBar floor, trench drain at the main bar, plumbing/gas rough-in. Auburn Mechanical verified underground waste depth. Capital Heating removed conflicting duct. Mesa completed NudlBar framing.</p>
-      <p>Next week: steel / T-braces, electrical, NudlBar plumbing/gas/trench drain, flooring/décor. Highlight: approved structural steel submittals.</p>
-    </div>
     <ul>
-      <li>Friday Zoom walked Bob’s Mon 12/21 Building-to-Owner / Tue 12/22 Sports Bar open — Todd doesn’t think décor installers can hit it. <strong>Blocker still in play: installer availability.</strong></li>
+      <li>All three live roots still 0% in Procore (structural steel reinforcing, Nudl Bar venue, Sportsbook and Food Hall) — field is ahead of the published schedule.</li>
+      <li>Friday Zoom walked Bob’s Mon 12/21 Building-to-Owner / Tue 12/22 Sports Bar open — Todd doesn’t think décor installers can hit it. <strong>Blocker: installer availability.</strong></li>
     </ul>
+    <div class="mail"><b>Bob Strum · 6:02 PM</b> Lunch with Shaun (Dir of Ops) + Marc on the revised schedule. Job now absorbs NudlBar plus major steel. <strong>Turnover pulled to just before Christmas</strong> (was first week of January). Electrician needs more manpower and documented credits for reduced scope. Agility must confirm install dates after steel “understated weight.” Top risk: owner decision / contracting latency — NudlBar kitchen equipment, chicken-venue kitchen design weeks out, beer wall stuck in liquor license. Owner will ask for VE on High Limits and possibly Valet entrance.</div>
+    <div class="mail"><b>George Hier · 6:07 PM</b> Bingo facility master planning starting soon. Good direction on the high-limit area.</div>
+    <div class="mail"><b>Marc Talen · 3:48 PM weekly</b> McClean Iron Works started column reinforcing (stitch welding, first large T-brace). Betschart pulled primary feeders to three new panels and conduit behind the Sportsbook video wall. Wallpaper Eagle finished Sportsbook wallcoverings. General Mechanical GPR-scanned the NudlBar floor, trench drain at the main bar, plumbing/gas rough-in. Auburn Mechanical verified underground waste depth. Capital Heating removed conflicting duct. Mesa completed NudlBar framing. Next week: steel / T-braces, electrical, NudlBar plumbing/gas/trench drain, flooring/décor. Highlight: approved structural steel submittals.</div>
   </div>
 </article>
 
@@ -200,7 +163,8 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
   <div class="job-hd">
     <div class="jobno">5326</div>
     <h3>Kentucky Downs Lucky Lantern</h3>
-    <p class="meta">PX Joe Jordan · PM Bob Strum · CM Andres Villa · 14 photos in Procore (Andres, 10:23 AM–12:26 PM)</p>
+    <p class="meta">PX Joe Jordan · PM Bob Strum · CM Andres Villa · 14 photos in Procore (Andres, 10:23 AM–12:26 PM) · no overall % · 11 procurement/CD/bid roots 100% · onsite 46%</p>
+    <p class="sked">Lobby open Friday · <span class="chip a">décor fab not started</span></p>
   </div>
   <div class="shots n4">
     <img src="photos/by-project/kentucky-downs/1.jpg" alt="Kentucky Downs wide shot 1">
@@ -208,24 +172,17 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
     <img src="photos/by-project/kentucky-downs/3.jpg" alt="Kentucky Downs wide shot 3">
     <img src="photos/by-project/kentucky-downs/4.jpg" alt="Kentucky Downs wide shot 4">
   </div>
-  <div class="cap"><span>Andres Villa · Jaime Santana · 4 wide shots</span></div>
+  <div class="cap">Andres Villa · Jaime Santana · 4 wide shots</div>
   <div class="money">
-    <div class="lbl">Budget tool · Construction Manager View</div>
-    <div class="bar"><div class="row"><span>Original</span><b>$2,004,924</b></div><div class="track"><div class="fill" style="width:86.1%"></div></div></div>
-    <div class="bar"><div class="row"><span>Revised</span><b>$2,328,261</b></div><div class="track"><div class="fill rev" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Committed</span><b>$1,480,549</b></div><div class="track"><div class="fill" style="width:63.6%"></div></div></div>
-    <div class="bar"><div class="row"><span>Actuals</span><b>$60,170</b></div><div class="track"><div class="fill act" style="width:2.6%"></div></div></div>
-    <div class="bar"><div class="row"><span>Remaining</span><b class="dash">—</b></div></div>
+    <div class="pie" style="--p:63.6" title="committed of revised"></div>
+    <div>
+      <div class="pie-lbl">committed of revised</div>
+      <div class="nums">Rev $2,328,261 · Com $1,480,549 · Act $60,170</div>
+      <p class="orig">Orig $2,004,924</p>
+    </div>
   </div>
   <div class="body">
-    <p class="note">No single overall %. Eleven procurement / CD / bid roots are 100%.</p>
-    <div class="bar"><div class="row"><span>Subcontracting / I-5 onsite</span><b>46%</b></div><div class="track"><div class="fill" style="width:46%"></div></div></div>
-    <div class="bar"><div class="row"><span>Décor design and fabrication</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0"></div></div></div>
-    <div class="mail">
-      <div class="from">email from Andres Villa · 1:11 PM EOD</div>
-      <p>Gas lines in and on pressure test. Ceiling tile 95%. Lucky Lantern sprinkler 95%. Eliason door frame set to BOH.</p>
-      <p><strong>Final state inspections passed for all Lobby areas — green light to open Friday.</strong> CO to be uploaded after special-inspection docs. Tomorrow: remove candlestick barrier/fence at casino front; continue drywall/finish.</p>
-    </div>
+    <div class="mail"><b>Andres Villa · 1:11 PM EOD</b> Gas lines in and on pressure test. Ceiling tile 95%. Lucky Lantern sprinkler 95%. Eliason door frame set to BOH. <strong>Final state inspections passed for all Lobby areas — green light to open Friday.</strong> CO to be uploaded after special-inspection docs. Tomorrow: remove candlestick barrier/fence at casino front; continue drywall/finish.</div>
   </div>
 </article>
 
@@ -233,35 +190,28 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
   <div class="job-hd">
     <div class="jobno">5152-1</div>
     <h3>Legends Casino</h3>
-    <p class="meta">PX Joe Hier · PM Todd Robison · CM Tom Halls · 49 photos in Procore (Hector Ortiz 47, Earl Pluard 2) · 5:22 AM–2:35 PM</p>
+    <p class="meta">PX Joe Hier · PM Todd Robison · CM Tom Halls · 49 photos in Procore (Hector Ortiz 47, Earl Pluard 2) · 5:22 AM–2:35 PM · no overall % · two live construction roots · lobby cultural 100% · Contract Date root 0%</p>
+    <p class="sked">Procore 6/30/26 · <span class="chip a">banquet still in progress</span> 75% / onsite 51%</p>
   </div>
   <div class="shots n3">
     <img src="photos/by-project/legends/1.jpg" alt="Legends wide shot 1">
     <img src="photos/by-project/legends/2.jpg" alt="Legends wide shot 2">
     <img src="photos/by-project/legends/3.jpg" alt="Legends wide shot 3">
   </div>
-  <div class="cap"><span>Earl Pluard · 3 of 4 wide shots on disk</span></div>
+  <div class="cap">Earl Pluard · 3 of 4 wide shots on disk</div>
   <div class="money">
-    <div class="lbl">Budget tool · Construction Manager View</div>
-    <div class="bar"><div class="row"><span>Original</span><b>$2,413,167</b></div><div class="track"><div class="fill" style="width:99.6%"></div></div></div>
-    <div class="bar"><div class="row"><span>Revised</span><b>$2,422,091</b></div><div class="track"><div class="fill rev" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Committed</span><b>$924,354</b></div><div class="track"><div class="fill" style="width:38.2%"></div></div></div>
-    <div class="bar"><div class="row"><span>Actuals</span><b>$26,705</b></div><div class="track"><div class="fill act" style="width:1.1%"></div></div></div>
-    <div class="bar"><div class="row"><span>Remaining</span><b class="dash">—</b></div></div>
+    <div class="pie" style="--p:38.2" title="committed of revised"></div>
+    <div>
+      <div class="pie-lbl">committed of revised</div>
+      <div class="nums">Rev $2,422,091 · Com $924,354 · Act $26,705</div>
+      <p class="orig">Orig $2,413,167</p>
+    </div>
   </div>
   <div class="body">
-    <div class="bar"><div class="row"><span>Lobby cultural enhancements</span><b>100%</b></div><div class="track"><div class="fill ok" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Conference &amp; Banquet</span><b>75%</b></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
-    <div class="bar"><div class="row"><span>Conference &amp; Banquet · onsite</span><b>51%</b></div><div class="track"><div class="fill" style="width:51%"></div></div></div>
-    <p class="note">No single overall % — two live construction roots only. Contract Date root is 0%.</p>
-    <div class="mail">
-      <div class="from">email from Tom Halls · 1:04 PM weekly</div>
-      <p>Door frames 95% painted. Main pre-function ceiling 100% by EOD; soffit 90%; Event Center entry ceiling patch/skim 60%. New receptacles throughout; all new exit signs up.</p>
-      <p>Look-ahead: chandelier crew Friday (four at Event Center entry). Alana meeting Todd and Joe Friday on office signage, possibly casino-wide.</p>
-    </div>
     <ul>
       <li>Zoom: Todd needs <strong>two carpenters on 8/31</strong>, not one. Hector’s Matterport is up.</li>
     </ul>
+    <div class="mail"><b>Tom Halls · 1:04 PM weekly</b> Door frames 95% painted. Main pre-function ceiling 100% by EOD; soffit 90%; Event Center entry ceiling patch/skim 60%. New receptacles throughout; all new exit signs up. Look-ahead: chandelier crew Friday (four at Event Center entry). Alana meeting Todd and Joe Friday on office signage, possibly casino-wide.</div>
   </div>
 </article>
 
@@ -269,7 +219,8 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
   <div class="job-hd">
     <div class="jobno">5302-1</div>
     <h3>Table Mountain Sports Bar &amp; Bev</h3>
-    <p class="meta">PX Aaron Carpenter · PM Daniel Scamman · CM Richard Vanderkarr · 1 submittal · 201 tasks · completion 12/2/26</p>
+    <p class="meta">PX Aaron Carpenter · PM Daniel Scamman · CM Richard Vanderkarr · 1 submittal · 201 tasks · overall 50% · design 75% · Phase 1 Bev 2 99% · Phase 2 Bev 5 &amp; Sports Bar 50% · Phase 2 demo 65% · punch/closeout 0%</p>
+    <p class="sked">12/2/26 · <span class="chip r">Phase 2 construction 3%</span></p>
   </div>
   <div class="shots n4">
     <img src="photos/by-project/table-mountain/1.jpg" alt="Table Mountain wide shot 1">
@@ -277,23 +228,16 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
     <img src="photos/by-project/table-mountain/3.jpg" alt="Table Mountain wide shot 3">
     <img src="photos/by-project/table-mountain/4.jpg" alt="Table Mountain wide shot 4">
   </div>
-  <div class="cap"><span>Brandon Brown · 4 wide shots</span></div>
+  <div class="cap">Brandon Brown · 4 wide shots</div>
   <div class="money">
-    <div class="lbl">Budget tool · Construction Manager View</div>
-    <div class="bar"><div class="row"><span>Original</span><b>$2,118,900</b></div><div class="track"><div class="fill" style="width:91.2%"></div></div></div>
-    <div class="bar"><div class="row"><span>Revised</span><b>$2,324,167</b></div><div class="track"><div class="fill rev" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Committed</span><b>$1,576,321</b></div><div class="track"><div class="fill" style="width:67.8%"></div></div></div>
-    <div class="bar"><div class="row"><span>Actuals</span><b>$30,037</b></div><div class="track"><div class="fill act" style="width:1.3%"></div></div></div>
-    <div class="bar"><div class="row"><span>Remaining</span><b class="dash">—</b></div></div>
+    <div class="pie" style="--p:67.8" title="committed of revised"></div>
+    <div>
+      <div class="pie-lbl">committed of revised</div>
+      <div class="nums">Rev $2,324,167 · Com $1,576,321 · Act $30,037</div>
+      <p class="orig">Orig $2,118,900</p>
+    </div>
   </div>
   <div class="body">
-    <div class="bar"><div class="row"><span>Project Schedule overall</span><b>50%</b></div><div class="track"><div class="fill" style="width:50%"></div></div></div>
-    <div class="bar"><div class="row"><span>Design and Planning</span><b>75%</b></div><div class="track"><div class="fill" style="width:75%"></div></div></div>
-    <div class="bar"><div class="row"><span>Phase 1 · Bev 2</span><b>99%</b></div><div class="track"><div class="fill ok" style="width:99%"></div></div></div>
-    <div class="bar"><div class="row"><span>Phase 2 · Bev 5 &amp; Sports Bar</span><b>50%</b></div><div class="track"><div class="fill" style="width:50%"></div></div></div>
-    <div class="bar"><div class="row"><span>Phase 2 demolition</span><b>65%</b></div><div class="track"><div class="fill" style="width:65%"></div></div></div>
-    <div class="bar"><div class="row"><span>Phase 2 construction</span><b>3%</b></div><div class="track"><div class="fill" style="width:3%"></div></div></div>
-    <div class="bar"><div class="row"><span>Punch / closeout / demobilization</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0"></div></div></div>
     <ul>
       <li>HVAC grilles still <strong>Pending In Review</strong> — G2 + O’Connor as-noted; ball-in-court <strong>Lauryn Caputo</strong> (due yesterday).</li>
       <li>Zoom: access-floor repairs. Rich VanderKarr flagged a <strong>bridging pedestal at the sump</strong>; Brandon Brown / Dan Scamman getting Tate to price early next week.</li>
@@ -305,7 +249,8 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
   <div class="job-hd">
     <div class="jobno">5308-2</div>
     <h3>Desert Diamond Tucson</h3>
-    <p class="meta">PX Aaron Carpenter · PM Todd Robison · CM Gus Lammé · 3 submittals · 15 photos in Procore (Todd Robison, 8:26 AM batch)</p>
+    <p class="meta">PX Aaron Carpenter · PM Todd Robison · CM Gus Lammé · 3 submittals · 15 photos in Procore (Todd Robison, 8:26 AM batch) · overall 90% · arch drawings 90% · offsite fab &amp; precon 4%</p>
+    <p class="sked">7/31/27 · <span class="chip a">onsite not started</span> <span class="chip r">coffee tables overdue</span></p>
   </div>
   <div class="shots n4">
     <img src="photos/by-project/desert-diamond/1.jpg" alt="Desert Diamond wide shot 1">
@@ -313,29 +258,21 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
     <img src="photos/by-project/desert-diamond/3.jpg" alt="Desert Diamond wide shot 3">
     <img src="photos/by-project/desert-diamond/4.jpg" alt="Desert Diamond wide shot 4">
   </div>
-  <div class="cap"><span>Todd Robison · Gus Lammé · 4 wide shots</span></div>
+  <div class="cap">Todd Robison · Gus Lammé · 4 wide shots</div>
   <div class="money">
-    <div class="lbl">Budget tool · Construction Manager View</div>
-    <div class="bar"><div class="row"><span>Original</span><b>$8,951,579</b></div><div class="track"><div class="fill" style="width:98.2%"></div></div></div>
-    <div class="bar"><div class="row"><span>Revised</span><b>$9,120,141</b></div><div class="track"><div class="fill rev" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Committed</span><b>$877,838</b></div><div class="track"><div class="fill" style="width:9.6%"></div></div></div>
-    <div class="bar"><div class="row"><span>Actuals</span><b>$0</b></div><div class="track"><div class="fill act ghost" style="width:0"></div></div></div>
-    <div class="bar"><div class="row"><span>Remaining</span><b class="dash">—</b></div></div>
+    <div class="pie" style="--p:9.6" title="committed of revised"></div>
+    <div>
+      <div class="pie-lbl">committed of revised</div>
+      <div class="nums">Rev $9,120,141 · Com $877,838 · Act $0</div>
+      <p class="orig">Orig $8,951,579</p>
+    </div>
   </div>
   <div class="body">
-    <div class="bar"><div class="row"><span>Project Schedule overall</span><b>90%</b></div><div class="track"><div class="fill ok" style="width:90%"></div></div></div>
-    <div class="bar"><div class="row"><span>Architectural drawings</span><b>90%</b></div><div class="track"><div class="fill ok" style="width:90%"></div></div></div>
-    <div class="bar"><div class="row"><span>Offsite fabrication &amp; precon</span><b>4%</b></div><div class="track"><div class="fill" style="width:4%"></div></div></div>
-    <div class="bar"><div class="row"><span>Onsite implementation</span><b>0%</b></div><div class="track"><div class="fill ghost" style="width:0"></div></div></div>
-    <div class="mail">
-      <div class="from">email from Gus Lammé · 5:45 PM weekly</div>
-      <p>Bid-walk week. Bids due Mon 8/17; review with Todd; select subs.</p>
-    </div>
     <ul>
-      <li><strong>F-07/F-08 custom coffee tables — Revise &amp; Resubmit, overdue</strong> (due 8/12). Ball-in-court Leanne Livingston; Joel Frost still pending.</li>
-      <li>AFRA furniture shop drawings as-noted (open, Deborah Snyder). OpiAry bench created, not yet sent (Tommy Roberts / Joel Frost), due 9/7.</li>
+      <li><strong>F-07/F-08 custom coffee tables — Revise &amp; Resubmit, overdue</strong> (due 8/12). BIC Leanne Livingston; Joel Frost still pending. AFRA furniture shop drawings as-noted (open, Deborah Snyder). OpiAry bench created, not yet sent (Tommy Roberts / Joel Frost), due 9/7.</li>
       <li>Zoom: Leanne asked if order review should postpone; Todd coming up. Finish calls: <strong>ACT-01 edge</strong>, <strong>WC-09 paint SW 6187 Rosemary</strong>.</li>
     </ul>
+    <div class="mail"><b>Gus Lammé · 5:45 PM weekly</b> Bid-walk week. Bids due Mon 8/17; review with Todd; select subs.</div>
   </div>
 </article>
 
@@ -346,6 +283,7 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
     <div class="jobno">5291</div>
     <h3>Gila River Lone Butte</h3>
     <p class="meta">PX Joe Hier · PM Bob Strum · schedule 90% (root “Week”) · nothing major Thursday</p>
+    <p class="sked">11/21/27 · <span class="chip g">quiet</span></p>
   </div>
   <div class="shots n4">
     <img src="photos/by-project/gila-river/1.jpg" alt="Gila River wide shot 1">
@@ -353,17 +291,14 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
     <img src="photos/by-project/gila-river/3.jpg" alt="Gila River wide shot 3">
     <img src="photos/by-project/gila-river/4.jpg" alt="Gila River wide shot 4">
   </div>
-  <div class="cap"><span>Daryl Walter · Jul 16–17 site walk — not Thursday</span></div>
+  <div class="cap">Daryl Walter · Jul 16–17 site walk — not Thursday</div>
   <div class="money">
-    <div class="lbl">Budget tool · Construction Manager View</div>
-    <div class="bar"><div class="row"><span>Original</span><b>$6,691,407</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Revised</span><b>$6,691,407</b></div><div class="track"><div class="fill rev" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Committed</span><b>$468,541</b></div><div class="track"><div class="fill" style="width:7.0%"></div></div></div>
-    <div class="bar"><div class="row"><span>Actuals</span><b>$0</b></div><div class="track"><div class="fill act ghost" style="width:0"></div></div></div>
-    <div class="bar"><div class="row"><span>Remaining</span><b class="dash">—</b></div></div>
-  </div>
-  <div class="body">
-    <div class="bar"><div class="row"><span>Week (overall)</span><b>90%</b></div><div class="track"><div class="fill ok" style="width:90%"></div></div></div>
+    <div class="pie" style="--p:7.0" title="committed of revised"></div>
+    <div>
+      <div class="pie-lbl">committed of revised</div>
+      <div class="nums">Rev $6,691,407 · Com $468,541 · Act $0</div>
+      <p class="orig">Orig $6,691,407</p>
+    </div>
   </div>
 </article>
 
@@ -371,18 +306,21 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
   <div class="job-hd">
     <div class="jobno">5264-1</div>
     <h3>Wyoming Downs</h3>
-    <p class="meta">PX Joe Jordan · 88 tasks, all published roots 0% · no overall · no photos on disk</p>
+    <p class="meta">PX Joe Jordan · 88 tasks · no overall · no photos on disk</p>
+    <p class="sked">8/28/26 · <span class="chip a">published roots 0%</span></p>
   </div>
   <div class="money">
-    <div class="lbl">Budget tool · Construction Manager View</div>
-    <div class="bar"><div class="row"><span>Original</span><b>$8,147,703</b></div><div class="track"><div class="fill" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Revised</span><b>$8,147,703</b></div><div class="track"><div class="fill rev" style="width:100%"></div></div></div>
-    <div class="bar"><div class="row"><span>Committed</span><b>$33,590</b></div><div class="track"><div class="fill" style="width:0.4%"></div></div></div>
-    <div class="bar"><div class="row"><span>Actuals</span><b>$0</b></div><div class="track"><div class="fill act ghost" style="width:0"></div></div></div>
-    <div class="bar"><div class="row"><span>Remaining</span><b class="dash">—</b></div></div>
+    <div class="pie" style="--p:0.4" title="committed of revised"></div>
+    <div>
+      <div class="pie-lbl">committed of revised</div>
+      <div class="nums">Rev $8,147,703 · Com $33,590 · Act $0</div>
+      <p class="orig">Orig $8,147,703</p>
+    </div>
   </div>
   <div class="body">
-    <p class="note">No photos on disk. Stone samples in bad shape; replacements est. early September. Joel Frost / Mike Williams on in-slab layout Zoom.</p>
+    <ul>
+      <li>No photos on disk. Stone samples in bad shape; replacements est. early September. Joel Frost / Mike Williams on in-slab layout Zoom.</li>
+    </ul>
   </div>
 </article>
 
@@ -390,16 +328,19 @@ footer{margin-top:22px;padding-top:12px;border-top:1px solid var(--line);font-si
   <div class="job-hd">
     <div class="jobno">5242</div>
     <h3>Spirit Mountain Restaurant Venues</h3>
-    <p class="meta">Lead admins Jackie Lemons, Leanne Livingston · 0 schedule tasks (completed) · no photos on disk</p>
+    <p class="meta">Lead admins Jackie Lemons, Leanne Livingston · 0 schedule tasks · no photos on disk</p>
+    <p class="sked"><span class="chip g">completed</span></p>
   </div>
   <div class="empty">Budget tool empty — Construction Manager View returned 200 with 0 rows. Not $0. No dollars invented.</div>
   <div class="body">
-    <p class="note">Derek Stiles reworked the restaurant-row sketch this morning; final plan includes a new <em>Embers</em> steakhouse — flagged to Joe Jordan.</p>
+    <ul>
+      <li>Derek Stiles reworked the restaurant-row sketch this morning; final plan includes a new <em>Embers</em> steakhouse — flagged to Joe Jordan.</li>
+    </ul>
   </div>
 </article>
 
 <footer>
-  Budget tool Construction Manager View collected 12:16 PM PT Aug 14, 2026 (nates-data-pull). Remaining left null — em dash, not computed. Spirit Mt restaurant empty (HTTP 200, 0 rows). Schedule % from live Procore tasks collected 11:25 AM PT. Personnel from assignments file. Outlook recaps from Thursday field email + Friday AM Zoom. No estimated_value / prime. Generated for Thu 2026-08-13 PT.
+  Budget tool Construction Manager View collected 12:16 PM PT Aug 14, 2026 (nates-data-pull). Remaining left null — not shown, not computed. Spirit Mt restaurant empty (HTTP 200, 0 rows). Schedule % from live Procore tasks collected 11:25 AM PT. Personnel from assignments file. Outlook recaps from Thursday field email + Friday AM Zoom. No estimated_value / prime. Generated for Thu 2026-08-13 PT.
 </footer>
 </div>
 </body>
