@@ -1,1 +1,393 @@
-PLACEHOLDER_READ_FROM_FILE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily digest · Friday, August 14, 2026</title>
+<style>
+:root{--bg:#10141a;--card:#181e26;--line:#3d4754;--ink:#efe8dc;--muted:#a89c8c;--orange:#e86c1a;--green:#3d9a5a;--red:#e0554a}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font:15px/1.35 system-ui,Segoe UI,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:#0b0e12;padding:20px 16px 14px;border-bottom:4px solid var(--orange)}
+.mark{font-weight:800;letter-spacing:.14em;font-size:11px;color:var(--orange);text-transform:uppercase}
+h1{margin:8px 0 0;font-size:22px}
+.sub{color:#b9ae9e;font-size:13px;margin-top:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:16px 14px 40px}
+.lede{background:var(--card);border-left:5px solid var(--orange);padding:10px 14px;margin:14px 0}
+.lede ul{margin:0;padding-left:18px}.lede li{margin:0 0 5px}
+.port,.job{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:0 0 22px;overflow:hidden}
+.port{padding:12px 14px}
+.job{border-width:2px}
+.job-hd{padding:12px 14px 6px}
+.jobno{color:var(--orange);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.job-hd h2{margin:2px 0 4px;font-size:18px}
+.onsite{margin:0 0 6px;font-size:13px;color:#c4b8a8}
+.call{color:#efe8dc;text-decoration:none;font-weight:600;white-space:nowrap}
+.call svg{width:11px;height:11px;margin-left:3px;vertical-align:-1px;fill:#e86c1a}
+.call:hover{color:#e86c1a}
+.cap{font-size:12px;color:var(--muted);margin:0;padding:4px 14px 0}
+.sked{margin:6px 0 0;font-size:13px}
+.chip{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700}
+.a{background:#32280e;color:#e6c56a}.r{background:#3a1614;color:#f0a39c}.g{background:#16301e;color:#8fd4a2}
+.shots{display:grid;gap:3px;background:#0a0d11}
+.shots.n4{grid-template-columns:repeat(4,1fr)}.shots.n3{grid-template-columns:repeat(3,1fr)}
+.shots img{width:100%;height:132px;object-fit:cover;display:block}
+.money{display:flex;align-items:center;gap:10px;margin:8px 0 0;padding:8px 10px;background:#0e1218;border-radius:4px}
+.pie{width:44px;height:44px;border-radius:50%;flex:0 0 44px;background:#2a313a}.pie.under{background:conic-gradient(from calc(var(--gap)*-3.6deg),#2a313a 0 calc(var(--gap)*3.6deg),var(--green) 0)}.pie.over{background:conic-gradient(from 0deg,#2a313a 0 calc(var(--gap)*3.6deg),var(--red) 0)}
+.nums{font-weight:700;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;gap:2px;min-width:0}
+.nums span{display:block;white-space:nowrap}
+.h{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8e8478;font-weight:700}
+.body{padding:8px 14px 14px}
+.body ul{margin:4px 0 0;padding-left:16px}.body li{margin:0 0 4px}
+.mp{margin:8px 14px 0;padding:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#0a0d11}
+.mp iframe{display:block;width:100%;height:220px;border:0}
+.mp + .mp{margin-top:6px}
+.mp.none{padding:8px 10px;color:#c4b8a8;font-size:13px;border-style:dashed}
+footer{font-size:12px;color:#8e8478;margin-top:16px;padding-top:10px;border-top:1px solid var(--line)}
+@media(max-width:720px){.shots.n4,.shots.n3{grid-template-columns:1fr 1fr}.shots img{height:110px}.money{align-items:flex-start}.nums span{white-space:normal}}
+
+.hdr-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.hdr-row .titles{min-width:0;flex:1}
+.cal-wrap{position:relative;flex:0 0 auto;margin-top:2px}
+.cal-btn{background:#e86c1a;color:#10141a;border:0;border-radius:6px;padding:8px 12px;font:700 13px/1.1 system-ui,Segoe UI,Helvetica,Arial,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.cal-btn:hover{filter:brightness(1.08)}
+.cal-btn svg{width:15px;height:15px;fill:currentColor}
+.cal-pop{display:none;position:absolute;right:0;top:calc(100% + 8px);z-index:80;width:268px;background:#181e26;border:1px solid #3d4754;border-radius:8px;padding:12px;box-shadow:0 10px 28px rgba(0,0,0,.5)}
+.cal-pop.open{display:block}
+.cal-pop-hd{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px;gap:8px}
+.cal-pop-hd strong{font-size:13px;color:#efe8dc}
+.cal-today{color:#e86c1a;font-size:12px;font-weight:700;text-decoration:none}
+.cal-today[hidden]{display:none}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center}
+.cal-dow{font-size:10px;color:#8e8478;font-weight:700;letter-spacing:.04em;padding:2px 0}
+.cal-day{font-size:12px;color:#6b6358;min-height:28px;display:flex;align-items:center;justify-content:center}
+.cal-day a{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:5px;color:#efe8dc;text-decoration:none;font-weight:700}
+.cal-day a:hover{background:#2a313a}
+.cal-day.live a{background:#e86c1a;color:#10141a}
+@media(max-width:720px){.cal-pop{right:-8px;width:min(268px,calc(100vw - 28px))}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="hdr-row">
+    <div class="titles">
+  <div class="mark">I-5 Design Build Inc.</div>
+  <h1>Daily digest · Friday, August 14, 2026</h1>
+  <div class="sub">Design-Build only · prior-day field book · Saturday 7:17am PT</div>
+    </div>
+    <div class="cal-wrap">
+      <button type="button" class="cal-btn" id="calBtn" aria-expanded="false" aria-controls="calPop" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+        Calendar
+      </button>
+      <div class="cal-pop" id="calPop" role="dialog" aria-label="August 2026">
+        <div class="cal-pop-hd">
+          <strong>August 2026</strong>
+          <a class="cal-today" href="/" id="calToday" hidden>Today</a>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+
+<section class="lede">
+  <ul>
+    <li><strong>5242-1 Spirit Mountain Sports Bar</strong> — Structural steel on site; slot power and platform framing laid out; Howie posted Friday Matterport.</li>
+    <li><strong>5302-1 Table Mountain</strong> — Bev 5 demo slipped to Monday; Mon 7am fire-alarm bypass then concrete cut.</li>
+    <li><strong>5326 Kentucky Downs</strong> — Lucky Lantern ceiling drywall done; lobby barriers off; substantial-completion forms circulating.</li>
+    <li><strong>5308-2 Desert Diamond Tucson</strong> — Andaaz 24" rounds going 24" high; first-round food-hall QA/QC done.</li>
+    <li><strong>5312 Muckleshoot</strong> — Lighting panels, column steel, and two trench drains in; artwork locked for Monday OAC.</li>
+    <li><strong>5291 Gila River</strong> — Phasing tweak for Blake, Revizto stood up, corner guards still needed.</li>
+    <li><strong>5264-1 Wyoming Downs</strong> — In-slab layout Zoom; exact stones week of 9/21.</li>
+    <li><strong>5152-1 Legends</strong> — Jobsite cleanup and upstairs electrical. No Zoom traffic Friday.</li>
+  </ul>
+</section>
+
+<div class="port">
+  <div class="h">Portfolio</div>
+  <div class="money">
+    <div class="pie under" style="--gap:1.4"></div>
+    <div class="nums"><span>Total subcost budget $40,754,081</span><span>Committed costs $13,984,142</span><span>Forecast to complete $40,196,240</span></div>
+  </div>
+</div>
+<article class="job" id="job-5242-1">
+  <div class="job-hd">
+    <div class="jobno">5242-1</div>
+    <h2>Spirit Mountain Sports Bar, Entry Gaming, Restrooms</h2>
+    <p class="onsite">On site: <a class="call" href="tel:+14068809115">Schuyler Dartt<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a>, <a class="call" href="tel:+12535760639">Howie Rasmussen<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a>, <a class="call" href="tel:+13163050167">Uriel Pizana<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a></p>
+    <p class="sked">Design-Build</p>
+      <div class="money">
+    <div class="pie over" style="--gap:0.5"></div>
+    <div class="nums"><span>Total subcost budget $4,874,118</span><span>Committed costs $3,028,075</span><span>Forecast to complete $4,899,781</span></div>
+  </div>
+  </div>
+  <div class="body">
+    <ul>
+      <li>Michael Williams EOD: laid out slot power in entry gaming; water-containment and platform framing in the sports bar; remaining decor beams demoed to laydown; dust barriers adjusted.</li>
+      <li>Structural steel received; Williams reviewed the structural plan with Dan. Weekend/next-week handoff with Ryan and Shaun.</li>
+      <li>Howie Rasmussen posted Friday Matterport (6:28 AM PT).</li>
+      <li>CNR bar grid: Mike Williams said remove all that grid if possible for structural steel (demo keynote 21).</li>
+      <li>Dan Scamman: permits approved. Monday: saw-cut entry-gaming trenches; finish private-dining framing + inspection; Phase 2 electrical rough-in.</li>
+      <li>VAV box submittal Revise &amp; Resubmit — Joe Martucci already sent Ron the Alerton BAS controls info.</li>
+      <li>Schuyler Dartt needs posted permits + inspection contacts for next week.</li>
+    </ul>
+  </div>
+  <div class="shots n4">
+    <img src="photos/by-project/spirit-mt-bar/1.jpg" alt="Sports Bar field photo 1">
+    <img src="photos/by-project/spirit-mt-bar/2.jpg" alt="Sports Bar field photo 2">
+    <img src="photos/by-project/spirit-mt-bar/3.jpg" alt="Sports Bar field photo 3">
+    <img src="photos/by-project/spirit-mt-bar/4.jpg" alt="Sports Bar field photo 4">
+  </div>
+
+  <p class="cap">4 field photos</p>
+    <div class="mp"><iframe src="https://my.matterport.com/show/?m=be5XgMxNDsq" allow="xr-spatial-tracking; fullscreen" allowfullscreen loading="lazy" title="Matterport be5XgMxNDsq"></iframe></div>
+</article>
+<article class="job" id="job-5312">
+  <div class="job-hd">
+    <div class="jobno">5312</div>
+    <h2>Muckleshoot Sportsbook & Food Court</h2>
+    <p class="onsite">On site: <a class="call" href="tel:+13609519150">Marc Talen<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a>, <a class="call" href="tel:+18303520697">Jhonny Trejo<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a>, <a class="call" href="tel:+18303195579">Jony Garcia<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a></p>
+    <p class="sked">Design-Build</p>
+      <div class="money">
+    <div class="pie under" style="--gap:16.8"></div>
+    <div class="nums"><span>Total subcost budget $5,579,684</span><span>Committed costs $4,121,729</span><span>Forecast to complete $4,639,624</span></div>
+  </div>
+  </div>
+  <div class="body">
+    <ul>
+      <li>Marc Talen EOD: Betschart finished lighting-panel terminations in the BOH corridor; Mesa FRT plywood/drywall at LED-07; McClean finished column reinforcing steel and six T-braces; General Mechanical set two of three trench drains.</li>
+      <li>Talen going out; handed sub and casino contacts to Gus Lammé for next week (Gus on site for the handoff).</li>
+      <li>Central-column design + artwork submittal for Monday OAC. Joe checked buildability; Bob Strum signed off. Jeanne Martucci rendering Monday afternoon.</li>
+    </ul>
+  </div>
+  <div class="shots n4">
+    <img src="photos/by-project/muckleshoot/1.jpg" alt="Muckleshoot field photo 1">
+    <img src="photos/by-project/muckleshoot/2.jpg" alt="Muckleshoot field photo 2">
+    <img src="photos/by-project/muckleshoot/3.jpg" alt="Muckleshoot field photo 3">
+    <img src="photos/by-project/muckleshoot/4.jpg" alt="Muckleshoot field photo 4">
+  </div>
+
+  <p class="cap">4 field photos</p>
+    <div class="mp none">Friday Matterport not posted.</div>
+</article>
+<article class="job" id="job-5326">
+  <div class="job-hd">
+    <div class="jobno">5326</div>
+    <h2>Kentucky Downs Lucky Lantern, Lobby, Coffee</h2>
+    <p class="onsite">On site: <a class="call" href="tel:+13614536288">Andres Villa<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a>, <a class="call" href="tel:+18307589091">Jaime Santana<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a>, <a class="call" href="tel:+17262443219">William Harper<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a></p>
+    <p class="sked">Design-Build</p>
+      <div class="money">
+    <div class="pie over" style="--gap:4.3"></div>
+    <div class="nums"><span>Total subcost budget $1,977,523</span><span>Committed costs $1,779,846</span><span>Forecast to complete $2,061,913</span></div>
+  </div>
+  </div>
+  <div class="body">
+    <ul>
+      <li>Andres Villa EOD: Lucky Lantern ceiling drywall done, finish started; candle-stick barrier and fence off Main Entry to Lobby; lobby cleaned for opening.</li>
+      <li>Monday: consolidate tools in Lucky Lantern, electrician sets chandelier, countertop repair. Next week: floor prep + wood floor, finish ceiling, paint, j-boxes, pull temp walls, Ansul finals.</li>
+      <li>Lauryn Caputo sent substantial-completion forms (Coffee Bar; Lobby/Gift Shop/VIP/Vestibule) — Andres Villa then Jose Ornelas.</li>
+      <li>Dan Salinger: shipment #17 ETA Thu 8/20 EOD.</li>
+    </ul>
+  </div>
+  <div class="shots n4">
+    <img src="photos/by-project/kentucky-downs/1.jpg" alt="Kentucky Downs field photo 1">
+    <img src="photos/by-project/kentucky-downs/2.jpg" alt="Kentucky Downs field photo 2">
+    <img src="photos/by-project/kentucky-downs/3.jpg" alt="Kentucky Downs field photo 3">
+    <img src="photos/by-project/kentucky-downs/4.jpg" alt="Kentucky Downs field photo 4">
+  </div>
+
+  <p class="cap">4 field photos</p>
+    <div class="mp none">Friday Matterport not posted.</div>
+</article>
+<article class="job" id="job-5152-1">
+  <div class="job-hd">
+    <div class="jobno">5152-1</div>
+    <h2>Legends Casino</h2>
+    <p class="onsite">On site: <a class="call" href="tel:+12087556644">Tom Halls<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a>, <a class="call" href="tel:+18303191026">Hector Ortiz<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a></p>
+    <p class="sked">Design-Build</p>
+      <div class="money">
+    <div class="pie under" style="--gap:16.1"></div>
+    <div class="nums"><span>Total subcost budget $2,413,167</span><span>Committed costs $1,267,964</span><span>Forecast to complete $2,024,199</span></div>
+  </div>
+  </div>
+  <div class="body">
+    <ul>
+      <li>Earl Pluard daily log: general cleanup of the jobsite.</li>
+      <li>Working on electrical upstairs.</li>
+      <li>No Zoom traffic Friday.</li>
+    </ul>
+  </div>
+  <div class="shots n3">
+    <img src="photos/by-project/legends/1.jpg" alt="Legends field photo 1">
+    <img src="photos/by-project/legends/2.jpg" alt="Legends field photo 2">
+    <img src="photos/by-project/legends/3.jpg" alt="Legends field photo 3">
+  </div>
+
+  <p class="cap">3 field photos</p>
+    <div class="mp none">Friday Matterport not posted.</div>
+</article>
+<article class="job" id="job-5302-1">
+  <div class="job-hd">
+    <div class="jobno">5302-1</div>
+    <h2>Table Mountain Sports Bar and Beverages</h2>
+    <p class="onsite">On site: <a class="call" href="tel:+12544339962">Brandon Brown<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a>, <a class="call" href="tel:+18304211244">Roy Santana<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a></p>
+    <p class="sked">Design-Build</p>
+      <div class="money">
+    <div class="pie over" style="--gap:17.3"></div>
+    <div class="nums"><span>Total subcost budget $2,118,900</span><span>Committed costs $2,036,426</span><span>Forecast to complete $2,486,187</span></div>
+  </div>
+  </div>
+  <div class="body">
+    <ul>
+      <li>Brandon Brown EOD: Fresno continued waste and started hot/cold; pulled water/vent at the Bev 5 cased opening. Pepsi pulled ice-well lines. Westech pulled electrical at the opening and continued overhead at the sports bar.</li>
+      <li>JMC drywall slipped to Monday (Pepsi late / demo no-show). Housekeeping of construction areas and casino floor.</li>
+      <li>Monday 7:00 AM fire-alarm bypass, then concrete cutting at Bev 5; GPR at the new floor sink; keep MEP going and start sports-bar framing.</li>
+      <li>Rich VanderKarr: bridge across the pedestal at the sump and match floor load rating. Tate may reinstall. David O’Connor posted final AudioTek AV drawings.</li>
+    </ul>
+  </div>
+  <div class="shots n4">
+    <img src="photos/by-project/table-mountain/1.jpg" alt="Table Mountain field photo 1">
+    <img src="photos/by-project/table-mountain/2.jpg" alt="Table Mountain field photo 2">
+    <img src="photos/by-project/table-mountain/3.jpg" alt="Table Mountain field photo 3">
+    <img src="photos/by-project/table-mountain/4.jpg" alt="Table Mountain field photo 4">
+  </div>
+
+  <p class="cap">4 field photos</p>
+    <div class="mp none">Friday Matterport not posted.</div>
+</article>
+<article class="job" id="job-5308-2">
+  <div class="job-hd">
+    <div class="jobno">5308-2</div>
+    <h2>Desert Diamond Tucson Food Hall & High Stakes</h2>
+    <p class="onsite">On site: <a class="call" href="tel:+19713451808">Gus Lammé<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.2 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg></a></p>
+    <p class="sked">Design-Build</p>
+      <div class="money">
+    <div class="pie over" style="--gap:2.3"></div>
+    <div class="nums"><span>Total subcost budget $8,951,579</span><span>Committed costs $888,047</span><span>Forecast to complete $9,158,522</span></div>
+  </div>
+  </div>
+  <div class="body">
+    <ul>
+      <li>Gus Lammé daily log: travel and clarification to subs.</li>
+      <li>Andaaz 24&quot; rounds planned at 24&quot; high (owner had approved 18&quot;); Krissia: better guest experience at the bar; Todd ok.</li>
+      <li>Manooi VIP chandeliers: ~24&quot; dia × 2&quot; painted canopies matching ceiling. ACT-01 black tile edge = Fineline bevel. WC-09 diffuser paint = SW 6187 Rosemary (PT-18).</li>
+      <li>Todd: do not postpone order review. Small black columns = decor, not a buy.</li>
+      <li>Daryl Walter: first-round food-hall QA/QC done. William Snyder posted High Stakes model V4.0.</li>
+    </ul>
+  </div>
+  <div class="shots n4">
+    <img src="photos/by-project/desert-diamond/1.jpg" alt="Desert Diamond Tucson field photo 1">
+    <img src="photos/by-project/desert-diamond/2.jpg" alt="Desert Diamond Tucson field photo 2">
+    <img src="photos/by-project/desert-diamond/3.jpg" alt="Desert Diamond Tucson field photo 3">
+    <img src="photos/by-project/desert-diamond/4.jpg" alt="Desert Diamond Tucson field photo 4">
+  </div>
+
+  <p class="cap">4 field photos</p>
+    <div class="mp none">Friday Matterport not posted.</div>
+</article>
+<article class="job" id="job-5291">
+  <div class="job-hd">
+    <div class="jobno">5291</div>
+    <h2>Gila River Lone Butte Interior Remodel</h2>
+    <p class="onsite">On site: none in resource planning Friday</p>
+    <p class="sked">Design-Build</p>
+      <div class="money">
+    <div class="pie under" style="--gap:0.0"></div>
+    <div class="nums"><span>Total subcost budget $6,691,407</span><span>Committed costs $468,541</span><span>Forecast to complete $6,691,407</span></div>
+  </div>
+  </div>
+  <div class="body">
+    <ul>
+      <li>No daily log Friday. Activity was in Zoom — not quiet.</li>
+      <li>Joe Hier / Bob Strum: phasing-plan tweak for Blake; Bob sending when done.</li>
+      <li>Goda: corner guards + column transition spec still needed; Timothy Michaelis added trim at Players Club opening.</li>
+      <li>William Snyder stood up Revizto (invites sent).</li>
+      <li>Ronni Price / Bob: Monday chat to send Procore submittals.</li>
+    </ul>
+  </div>
+  <div class="shots n4">
+    <img src="photos/by-project/gila-river/1.jpg" alt="Gila River field photo 1">
+    <img src="photos/by-project/gila-river/2.jpg" alt="Gila River field photo 2">
+    <img src="photos/by-project/gila-river/3.jpg" alt="Gila River field photo 3">
+    <img src="photos/by-project/gila-river/4.jpg" alt="Gila River field photo 4">
+  </div>
+
+  <p class="cap">4 field photos</p>
+    <div class="mp none">Friday Matterport not posted.</div>
+</article>
+<article class="job" id="job-5264-1">
+  <div class="job-hd">
+    <div class="jobno">5264-1</div>
+    <h2>Wyoming Downs Interior Build Out</h2>
+    <p class="onsite">On site: none in resource planning Friday</p>
+    <p class="sked">Design-Build</p>
+      <div class="money">
+    <div class="pie over" style="--gap:1.1"></div>
+    <div class="nums"><span>Total subcost budget $8,147,703</span><span>Committed costs $393,514</span><span>Forecast to complete $8,234,607</span></div>
+  </div>
+  </div>
+  <div class="body">
+    <ul>
+      <li>No daily log Friday.</li>
+      <li>Joel Frost / Mike Williams Zoom ~10:10 AM PT on in-slab layout + control points.</li>
+      <li>Ronni Price: similar in-stock samples shipped; exact stones week of 9/21; more similar colors next week after Friday’s samples arrived in bad shape.</li>
+      <li>Joel posted access-floor PDF / CAD / spec.</li>
+    </ul>
+  </div>
+    <div class="mp none">Friday Matterport not posted.</div>
+</article>
+
+<footer>Friday Aug 14 field book. Design-Build only.</footer>
+</div>
+<script>
+(function(){
+  var BAKED=[{"date":"2026-08-13","label":"Thu Aug 13"},{"date":"2026-08-14","label":"Fri Aug 14"}];
+  var LIVE="2026-08-14";
+  var YEAR=2026, MONTH=7;
+  var btn=document.getElementById("calBtn");
+  var pop=document.getElementById("calPop");
+  var grid=document.getElementById("calGrid");
+  var today=document.getElementById("calToday");
+  if(!btn||!pop||!grid) return;
+  var path=(location.pathname||"").replace(/\/+$/,"")||"/";
+  if(path!=="/" && !/\/index\.html$/i.test(path)) today.removeAttribute("hidden");
+  function render(dates){
+    var set={};
+    (dates||[]).forEach(function(d){ if(d&&d.date) set[d.date]=d; });
+    var html=["Su","Mo","Tu","We","Th","Fr","Sa"].map(function(d){return '<div class="cal-dow">'+d+"</div>";}).join("");
+    var startDow=new Date(YEAR,MONTH,1).getDay();
+    var dim=new Date(YEAR,MONTH+1,0).getDate();
+    var i,d,iso,cls,inner;
+    for(i=0;i<startDow;i++) html+='<div class="cal-day"></div>';
+    for(d=1;d<=dim;d++){
+      iso=YEAR+"-08-"+(d<10?"0":"")+d;
+      cls="cal-day";
+      inner=String(d);
+      if(set[iso]){
+        if(iso===LIVE) cls+=" live";
+        inner='<a href="/'+iso+'.html" title="'+(set[iso].label||iso)+'">'+d+"</a>";
+      }
+      html+='<div class="'+cls+'">'+inner+"</div>";
+    }
+    grid.innerHTML=html;
+  }
+  render(BAKED);
+  fetch("/dates.json").then(function(r){return r.ok?r.json():BAKED;}).then(render).catch(function(){});
+  btn.addEventListener("click",function(e){
+    e.stopPropagation();
+    var open=pop.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open?"true":"false");
+  });
+  document.addEventListener("click",function(e){
+    if(!pop.contains(e.target)&&e.target!==btn&&!btn.contains(e.target)){
+      pop.classList.remove("open");
+      btn.setAttribute("aria-expanded","false");
+    }
+  });
+})();
+</script>
+</body>
+</html>
